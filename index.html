@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudySprint</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 StudySprint</h1>
+      <p>Stay focused. Stay productive.</p>
+    </header>
+
+    <main>
+      <section class="tasks">
+        <h2>📝 Tasks</h2>
+        <form id="task-form">
+          <input type="text" id="task-input" placeholder="Add a new task..." required />
+          <button type="submit">Add</button>
+        </form>
+        <ul id="task-list"></ul>
+      </section>
+
+      <section class="pomodoro">
+        <h2>⏳ Pomodoro Timer</h2>
+        <h3 id="current-task-label">🎯 No task selected</h3>
+        <div class="timer" id="timer">25:00</div>
+        <div class="buttons">
+          <button onclick="startTimer()">Start</button>
+          <button onclick="pauseTimer()">Pause</button>
+          <button onclick="resetTimer()">Reset</button>
+        </div>
+        <p class="streak">🔥 Pomodoros Today: <span id="streak-count">0</span></p>
+      </section>
+    </main>
+  </div>
+
+  <audio id="alarm" src="https://www.soundjay.com/buttons/beep-07.mp3" preload="auto"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
+
